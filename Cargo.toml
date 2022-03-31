@@ -1,0 +1,43 @@
+[package]
+name = "test-rust-size"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+strip = true
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[dependencies]
+libc-print = "0.1.17"
+smol = "1.2.5"
+mimalloc = "0.1.28"
+woke = "0.0.2"
+
+[workspace]
+members = [
+    "std-println",
+    "nostd-println",
+    "std-smol",
+    "nostd-tcp",
+]
+
+[[bin]]
+name = "std-println"
+path = "std-println/src/main.rs"
+
+[[bin]]
+name = "nostd-println"
+path = "nostd-println/src/main.rs"
+
+[[bin]]
+name = "std-smol"
+path = "std-smol/src/main.rs"
+
+[[bin]]
+name = "nostd-tcp"
+path = "nostd-tcp/src/main.rs"
