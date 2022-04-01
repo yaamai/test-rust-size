@@ -1,3 +1,10 @@
+use async_executor::Executor;
+use futures_lite::future;
+
 fn main() {
-    println!("Hello, world!");
+    let ex = Executor::new();
+    let task = ex.spawn(async {
+        println!("Hello world");
+    });
+    future::block_on(ex.run(task));
 }

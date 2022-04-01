@@ -3,5 +3,64 @@
 version = 3
 
 [[package]]
+name = "executor"
+version = "0.8.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "00b97055325eceee68adacdd92a8f92ddda0703b8452e66ed6b4dc98816fe589"
+dependencies = [
+ "lazy_static",
+ "spin",
+ "woke",
+]
+
+[[package]]
+name = "lazy_static"
+version = "1.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
+dependencies = [
+ "spin",
+]
+
+[[package]]
+name = "libc"
+version = "0.2.121"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "efaa7b300f3b5fe8eb6bf21ce3895e1751d9665086af2d64b42f19701015ff4f"
+
+[[package]]
+name = "libc-print"
+version = "0.1.19"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4580c894695923468a80b039d7e552739c79612fe4d32beb0f20175de1985d6d"
+dependencies = [
+ "libc",
+]
+
+[[package]]
+name = "libc_alloc"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "db1d62455a2746a7f4a67a62d77f969954cd7d3bca46e4d037acd097ba79dab4"
+
+[[package]]
 name = "nostd-println-async"
 version = "0.1.0"
+dependencies = [
+ "executor",
+ "libc",
+ "libc-print",
+ "libc_alloc",
+]
+
+[[package]]
+name = "spin"
+version = "0.5.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
+
+[[package]]
+name = "woke"
+version = "0.0.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "eafdab77c9ee549298ca6585107832aa89d77b14ba13cda220fec6105b17dbb1"

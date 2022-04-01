@@ -15,5 +15,5 @@ panic = "abort"
 [dependencies]
 libc = { version = "0.2", default-features = false }
 libc-print = "0.1.17"
-mimalloc = "0.1.28"
+libc_alloc = "1.0.3"
 woke = "0.0.2"

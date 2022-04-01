@@ -6,10 +6,10 @@
 extern crate libc;
 extern crate alloc;
 
-use mimalloc::MiMalloc;
+use libc_alloc::LibcAlloc;
 
 #[global_allocator]
-static GLOBAL: MiMalloc = MiMalloc;
+static ALLOCATOR: LibcAlloc = LibcAlloc;
 
 use alloc::{boxed::Box};
 use alloc::sync::Arc;
