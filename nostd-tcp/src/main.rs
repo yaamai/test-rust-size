@@ -59,6 +59,8 @@ async fn test2() -> u32 {
 }
 
 fn main() {
+    let sock = unsafe { libc::socket(libc::AF_INET, libc::SOCK_STREAM, 0) };
+    // libc::connect(sock);
     println!("aa");
 
     let io = TestIO{waker: None};

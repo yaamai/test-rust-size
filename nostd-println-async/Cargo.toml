@@ -1,5 +1,5 @@
 [package]
-name = "nostd-println"
+name = "nostd-println-async"
 version = "0.1.0"
 edition = "2021"
 
@@ -13,5 +13,3 @@ panic = "abort"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-libc = { version = "0.2", default-features = false }
-libc-print = "0.1.17"
