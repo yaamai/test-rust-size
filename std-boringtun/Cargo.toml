@@ -1,5 +1,5 @@
 [package]
-name = "nostd-tcp"
+name = "std-boringtun"
 version = "0.1.0"
 edition = "2021"
 
@@ -13,8 +13,4 @@ panic = "abort"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-libc = { version = "0.2", default-features = false }
-libc-print = "0.1.17"
-libc_alloc = "1.0.3"
-woke = "0.0.2"
-cstr_core = "0.2.5"
+boringtun = "0.4.0"
